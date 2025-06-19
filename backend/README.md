@@ -16,18 +16,36 @@ A simple RESTful API for user management, built with **Node.js** and **Express**
 ## Technology Stack
 - **Language:** JavaScript (Node.js)
 - **Framework:** Express
+- **Unique ID Generation:** UUID
 
 ---
 
-## Setup Instructions
+## Prerequisites
 
-1. **Install dependencies:**
+- [Node.js](https://nodejs.org/) (v14 or higher recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+
+---
+
+## Installation & Setup
+
+1. **Clone the repository:**
    ```bash
-   cd backend
+   git clone <your-repo-url>
+   cd Simple-Rest-API/backend
+   ```
+
+2. **Install dependencies:**
+   This project uses Express (web framework) and UUID (for generating unique user IDs).
+   ```bash
+   npm install express uuid
+   ```
+   Or, if you want to install all dependencies from `package.json` (recommended):
+   ```bash
    npm install
    ```
 
-2. **Run the server:**
+3. **Run the server:**
    ```bash
    node index.js
    ```
@@ -35,7 +53,7 @@ A simple RESTful API for user management, built with **Node.js** and **Express**
 
 ---
 
-## API Documentation
+## API Endpoints
 
 ### 1. Create a User
 - **Endpoint:** `POST /users`
@@ -51,7 +69,7 @@ A simple RESTful API for user management, built with **Node.js** and **Express**
   - **Body:**
     ```json
     {
-      "id": "<generated-uuid>",
+      "id": "generated-uuid",
       "name": "John Doe",
       "email": "john@example.com"
     }
@@ -79,7 +97,7 @@ curl -X POST http://localhost:3000/users \
   - **Body:**
     ```json
     {
-      "id": "<user-id>",
+      "id": "user-id",
       "name": "John Doe",
       "email": "john@example.com"
     }
